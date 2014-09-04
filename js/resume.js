@@ -1,20 +1,18 @@
 var resume = angular.module('resume', [])
 resume.controller('ExperienceController', ['$scope', function($scope) {
 	$scope.skills = [
-       { title: 'AngularJS', rating: 8.0 },
-       { title: 'D3.js', rating: 7.5 },
-       { title: 'Java EE', rating: 10.0 },
-       { title: 'Relational Databases', rating: 10.0 },
-       { title: 'Groovy / Grails', rating: 9.0 },
-       { title: 'Ruby on Rails', rating: 6.0 },
-       { title: 'Neo4j', rating: 7.0 },
-       { title: 'Titan DB', rating: 8.0 },
-       { title: 'JQuery', rating: 8.0 },
-       { title: 'Linux', rating: 7.0 },
-       { title: 'CSS', rating: 8.5 },
-       { title: 'Git', rating: 9.0 },
-       { title: 'Subversion', rating: 9.0 },
-       { title: 'IBM WebSphere v6.1', rating: 6.5 },
+       { title: 'AngularJS', rating: 4 },
+       { title: 'D3.js', rating: 4 },
+       { title: 'Java EE', rating: 5 },
+       { title: 'MySQL', rating: 5 },
+       { title: 'Groovy / Grails', rating: 5 },
+       { title: 'Ruby on Rails', rating: 3 },
+       { title: 'Neo4j', rating: 3 },
+       { title: 'Titan DB', rating: 4 },
+       { title: 'JQuery', rating: 4 },
+       { title: 'CSS', rating: 4 },
+       { title: 'Git', rating: 4 },
+       { title: 'IBM WebSphere', rating: 3 },
     ]
 }])
 resume.directive('arcChart', function() {
@@ -41,62 +39,45 @@ resume.directive('arcChart', function() {
 		}
 	}
 })
-resume.directive('barChart', function() {
+resume.directive('starChart', function() {
 	return {
 		restrict: 'EA',
 		scope: {
-			percentage: '=percentage',
+			stars: '=stars',
 			title: '=title'
 		},
 		link: function($scope, $element, $attrs) {
 			var x = d3.scale.linear().domain([0, 1]).range([0, 100]);
 			var options = {
-				height: 18,
-				fontSize: 16
+				height: 20,
+				fontSize: 14,
+				width: '100%',
+				textMargin: 10
 			}
-			var svg = d3.select($element[0]).append('svg').attr('width', '100%').attr('height', options.height);
-			var gradient = svg.append("svg:defs")
-			  .append("svg:linearGradient")
-			    .attr("id", "gradient")
-			    .attr("x1", "0%")
-			    .attr("y1", "100%")
-			    .attr("x2", "100%")
-			    .attr("y2", "100%")
-			    .attr("spreadMethod", "pad");
-			 
-			gradient.append("svg:stop")
-			    .attr("offset", "0%")
-			    .attr("stop-color", "#EED000")
-			    .attr("stop-opacity", 1);
-			 
-			gradient.append("svg:stop")
-			    .attr("offset", "100%")
-			    .attr("stop-color", "#FF4E00")
-			    .attr("stop-opacity", 1);
-			
-			svg.append('svg:rect').attr({
-				'x': '0%',
-				'y': 0,
-				'width': '100%',
-				'height': options.height,
-				'fill': '#FF4E00'
-			});
-			svg.append('svg:rect').attr({
-				'x': x($scope.percentage) + '%',
-				'y': 0,
-				'width': '100%',
-				'height': options.height,
-				'fill': 'rgba(255,255,255,0.7)'
-			})
-			svg.append('svg:text').attr({
-				'x': x($scope.percentage) - 3 + '%',
+			var svg = d3.select($element[0]).append('svg').attr('width', options.width).attr('height', options.height);
+			var text = svg.append('svg:text').attr({
+				'x': 0,
 				'y': options.height/2 + 6,
 				'font-family': 'Open Sans',
-				'font-weight': '100',
+				'font-weight': '600',
 				'font-size': options.fontSize,
-				'fill': 'white',
-				'text-anchor': 'end'
+				'fill': 'black',
 			}).text($scope.title)
+			
+			var computedTextLength = text.node().getComputedTextLength()
+			
+			for (var i = 0; i < $scope.stars; i++) {
+				svg.append('svg:image').attr({
+					'class': 'star',
+					'y': 1,
+					'height': options.height-2,
+					'width': options.height-2,
+					'xlink:href': 'images/star.svg',
+					'x': -100
+				}).transition().duration(700).attr('x', function() {
+					return computedTextLength + options.textMargin + (options.height-2) * i;
+				})
+			}
 		}
 	}
 })

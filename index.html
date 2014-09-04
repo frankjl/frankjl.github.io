@@ -29,7 +29,11 @@
 					<h1>Skills</h1>
 				</div>
 				<div class="col-md-9" ng-controller="ExperienceController">
-					<div horizontal-bar-chart skills="skills"></div>
+					<ul class="list-inline">
+						<li class="col-sm-3 col-xs-4" style="padding: 3px 3px;" ng-repeat="skill in skills">
+							<div star-chart stars="skill.rating" title="skill.title"></div>
+						</li>
+					</ul>
 				</div>
 			</div>
 			<div class="row">
@@ -73,9 +77,15 @@
 				</div>
 				<div class="col-md-9">
 					<div class="col-md-12">
+						<ul class="list-unstyled">
+							<li></li>
+						</ul>
 					</div>
 				</div>
 			</div>
+			<footer class="footer text-center">
+				<strong class="center-block">frankjl.github.io</strong>
+			</footer>
 		</div>
 	</body>
 </html>
