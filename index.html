@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>Frank J. Lamantia | Full Stack Engineer</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/resume.css">
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.13/angular.min.js"></script>
+		<script src="../js/rainbow.vis.js"></script>
+		<script src="../js/resume.js"></script>
+	</head>
+	<body class="padding-top-15" ng-app="resume">
+		<div class="container">
+			<header>
+				<div class="pull-right padding-top-15 hidden-print"><img src="http://www.gravatar.com/avatar/13fcd4352d1faca3c616d49b0d97f83e"></div>
+				<div class="hero">Frank J. Lamantia</div>
+				<ul class="list-inline pull-left muted">
+					<li>Full Stack Engineer</li>
+					<li>Technical Lead</li>
+					<li>Java Guru</li>
+					<li>Aspiring Java Script Ninja</li>
+					<li>Maker of Awesome</li>
+				</ul>
+				<ul class="list-inline contact-list">
+					<li><div class="glyphicon glyphicon-earphone margin-right-4"></div> <a href="tel:+1-614-917-3599">(614) 917-3599</a></li>
+					<li><div class="glyphicon glyphicon-envelope margin-right-4"></div> <a href="mailto:frankjlamantia@gmail.com">frankjlamantia@gmail.com</a></li>
+				</ul>
+				
+			</header>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="col-md-3">
+						<h1>Skills</h1>
+					</div>
+					<div class="col-md-9" ng-controller="ExperienceController">
+						<div horizontal-bar-chart skills="skills"></div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-3">
+						<h1>Experience</h1>
+					</div>
+					<div class="col-md-9">
+						<h3 class="pull-left margin-bottom-3">Senior Software Engineer</h3>
+						<h5 class="pull-right muted">December 2013 - current</h5>
+						<div class="clearfix"></div>
+						<h5 class="margin-top-0 muted">CrossChx, LLC.</h5>
+						<p>Developer &amp; technical lead in an extremely fast-paced startup environment. Quickly prototype and get feedback on a variety of applications for a multitude of clients in the healthcare arena.  Use <strong>Groovy &amp; Grails</strong>, <strong>AngularJS</strong> &amp; <strong>D3.js</strong> to visualize large amounts of heterogenous data.</p>
+						
+						<h3 class="pull-left margin-bottom-3">Consultant, Biomedical Informatics</h3>
+						<h5 class="pull-right muted">April 2012 - December 2013</h5>
+						<div class="clearfix"></div>
+						<h5 class="margin-top-0 muted">Ohio State University Wexner Medical Center</h5>
+						<p>Developer, tech lead and team lead of 5 direct reports. Design, implement & support user-facing web applications written in <strong>Ruby on Rails</strong>, <strong>Java</strong> and PHP. Use industry best UI frameworks such as <strong>JQuery</strong>, JQuery UI &amp; <strong>Bootstrap</strong> to create simple, elegant yet robust user interfaces.
+						
+						<h3 class="pull-left margin-bottom-3">Specialist, IT Application Development</h3>
+						<h5 class="pull-right muted">June 2007 - April 2012</h5>
+						<div class="clearfix"></div>
+						<h5 class="margin-top-0 muted">Nationwide Insurance</h5>
+						<p>Technical Lead for Nationwide's customer facing auto insurance application. Allows customers to customize an automobile insurance quote and bind a policy in almost real-time. Oversaw 5 development lines using both <strong>agile</strong> &amp; waterfall methodologies.</p>
+					</div><!-- END experience -->
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-3">
+						<h1>Education</h1>
+					</div>
+					<div class="col-md-9">
+						<h3 class="pull-left margin-bottom-3">BS, Computer Information Systems</h3>
+						<h5 class="pull-right muted">September 2004 - June 2007</h5>
+						<div class="clearfix"></div>
+						<h5 class="margin-top-0 muted">The Ohio State University</h5>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-3">
+						<h1>Social</h1>
+					</div>
+					<div class="col-md-9">
+						<div class="col-md-12">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
