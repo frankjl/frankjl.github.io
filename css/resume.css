@@ -97,4 +97,9 @@ a:hover {
 	a[href]:after {
 		content: none !important;
 	}
+	/** Makes the page print nicer **/
+	.col-sm-4 {
+		width: 33.33333333% !important;
+		float: left;
+	}
 }
