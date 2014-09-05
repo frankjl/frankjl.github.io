@@ -27,6 +27,12 @@ h1, h2, h3, h4, h5, h6, p {
 .padding-top-15 {
 	padding-top: 15px;
 }
+ul.projects li {
+	margin-bottom: 20px;
+}
+.push-right-20 {
+	margin-left: 20px;
+}
 .margin-right-4 {
 	margin-right: 4px;
 }
@@ -48,6 +54,37 @@ a:hover {
 .contact-list {
 	display: block;
 	clear: both;
+}
+.social-media {
+	display: inline-block;
+	margin-right: 6px;
+	vertical-align: bottom;
+}
+/* li:not(:hover) .social-media {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);	
+} */
+.social-media.linked-in {
+	background: url('../images/linkedin.png');
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	width: 32px;
+	height: 32px;
+}
+.social-media.github {
+	background: url('../images/github.png');
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	width: 32px;
+	height: 32px;
+}
+.social-media.stack-overflow {
+	background: url('../images/stackoverflow.png');
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	width: 33px;
+	height: 32px;
 }
 @media screen and (min-width: 895px) {
 	.contact-list {

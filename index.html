@@ -1,14 +1,19 @@
 <html>
 	<head>
 		<title>Frank J. Lamantia | Full Stack Engineer</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/resume.css">
-		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.13/angular.min.js"></script>
-		<script src="../js/rainbow.vis.js"></script>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/resume.css">
+		<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.13/angular.min.js"></script>
 		<script src="../js/resume.js"></script>
+		
+		<meta charset="UTF-8">
+		<meta name="description" content="Free Web tutorials">
+		<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+		<meta name="author" content="Hege Refsnes">
 	</head>
 	<body class="padding-top-15" ng-app="resume">
 		<div class="container">
@@ -30,37 +35,114 @@
 				</div>
 				<div class="col-md-9" ng-controller="ExperienceController">
 					<ul class="list-inline">
-						<li class="col-sm-3 col-xs-4" style="padding: 3px 3px;" ng-repeat="skill in skills">
+						<li class="col-sm-4 col-xs-4 col-md-3" style="padding: 3px 3px;" ng-repeat="skill in skills | orderBy:'rating':true">
 							<div star-chart stars="skill.rating" title="skill.title"></div>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row padding-top-15">
 				<div class="col-md-3">
 					<h1>Experience</h1>
 				</div>
 				<div class="col-md-9">
-					<h3 class="pull-left margin-bottom-3">Senior Software Engineer</h3>
-					<h5 class="pull-right muted">December 2013 - current</h5>
-					<div class="clearfix"></div>
-					<h5 class="margin-top-0 muted">CrossChx, LLC.</h5>
-					<p>Developer &amp; technical lead in an extremely fast-paced startup environment. Quickly prototype and get feedback on a variety of applications for a multitude of clients in the healthcare arena.  Use <strong>Groovy &amp; Grails</strong>, <strong>AngularJS</strong> &amp; <strong>D3.js</strong> to visualize large amounts of heterogenous data.</p>
-					
-					<h3 class="pull-left margin-bottom-3">Consultant, Biomedical Informatics</h3>
-					<h5 class="pull-right muted">April 2012 - December 2013</h5>
-					<div class="clearfix"></div>
-					<h5 class="margin-top-0 muted">Ohio State University Wexner Medical Center</h5>
-					<p>Developer, tech lead and team lead of 5 direct reports. Design, implement & support user-facing web applications written in <strong>Ruby on Rails</strong>, <strong>Java</strong> and PHP. Use industry best UI frameworks such as <strong>JQuery</strong>, JQuery UI &amp; <strong>Bootstrap</strong> to create simple, elegant yet robust user interfaces.
-					
-					<h3 class="pull-left margin-bottom-3">Specialist, IT Application Development</h3>
-					<h5 class="pull-right muted">June 2007 - April 2012</h5>
-					<div class="clearfix"></div>
-					<h5 class="margin-top-0 muted">Nationwide Insurance</h5>
-					<p>Technical Lead for Nationwide's customer facing auto insurance application. Allows customers to customize an automobile insurance quote and bind a policy in almost real-time. Oversaw 5 development lines using both <strong>agile</strong> &amp; waterfall methodologies.</p>
+					<ul class="list-unstyled">
+						<li>
+							<h3 class="pull-left margin-bottom-3">Senior Software Engineer</h3>
+							<h5 class="pull-right muted">December 2013 - current</h5>
+							<div class="clearfix"></div>
+							<h5 class="margin-top-0 muted">CrossChx, LLC.</h5>
+							<p>Developer &amp; technical lead in an extremely fast-paced startup environment. Quickly prototype and get feedback on a variety of applications for a multitude of clients in the healthcare arena.  Use <strong>Groovy &amp; Grails</strong>, <strong>AngularJS</strong> &amp; <strong>D3.js</strong> to visualize large amounts of heterogenous data.</p>
+						</li>
+						<li>
+							<h3 class="pull-left margin-bottom-3">Consultant, Biomedical Informatics</h3>
+							<h5 class="pull-right muted">April 2012 - December 2013</h5>
+							<div class="clearfix"></div>
+							<h5 class="margin-top-0 muted">Ohio State University Wexner Medical Center</h5>
+							<p>Developer &amp; tech lead and manager of 5 direct reports. Design, implement &amp; support user-facing web applications written in <strong>Ruby on Rails</strong>, <strong>Java</strong> and PHP. Use industry best UI frameworks such as <strong>JQuery</strong>, <strong>JQuery UI</strong> &amp; <strong>Bootstrap</strong> to create simple, elegant yet robust user interfaces.
+						</li>
+						<li>
+							<h3 class="pull-left margin-bottom-3">Specialist, IT Application Development</h3>
+							<h5 class="pull-right muted">June 2007 - April 2012</h5>
+							<div class="clearfix"></div>
+							<h5 class="margin-top-0 muted">Nationwide Insurance</h5>
+							<p>Technical Lead for Nationwide's customer facing auto insurance application. Allows customers to customize an automobile insurance quote and bind a policy in almost real-time. Oversaw 5 development lines using both <strong>agile</strong> &amp; waterfall methodologies.</p>
+						</li>
+					</ul>
 				</div><!-- END experience -->
 			</div>
-			<div class="row">
+			<div class="row padding-top-15">
+				<div class="col-md-3">
+					<h1>Project Highlights</h1>
+				</div>
+				<div class="col-md-9">
+					<ul class="list-unstyled projects">
+						<li>
+							<h3 class="pull-left margin-bottom-3">Computerized Research Record</h3>
+							<h5 class="pull-right muted">October 2012 - December 2013</h5>
+							<div class="clearfix"></div>
+							<h5 class="margin-top-0 muted">The Ohio State University Wexner Medical Center</h5>
+							<p>
+								A research-project lifecycle management tool built on an electronic medical record metaphor, 
+								used to track &amp; monitor all aspects of a research project. Used by the Center for Clinical and 
+								Translational Sciences at Ohio State University. Built using <strong>Ruby on Rails</strong>, <strong>MySQL</strong>, 
+								<strong>JQuery</strong> and supports tablet &amp; mobile browsers by using <strong>responsive design principles.</strong>
+							</p>
+						</li>
+						<li>
+							<h3 class="pull-left margin-bottom-3">n-Vision Core</h3>
+							<h5 class="pull-right muted">April 2012 - October 2012</h5>
+							<div class="clearfix"></div>
+							<h5 class="margin-top-0 muted">The Ohio State University Wexner Medical Center</h5>
+							<p>
+								An appliance used for cohort discovery & analysis of distributed datasets. The platform was built on 
+								Google Web Toolkit, Hibernate and Axis web services. We developed an extension to support quality of 
+								service metrics for care providers across the nation.
+							<p>
+								I built a user interface to support cohort discovery, including querying across distributed datasets 
+								and a graphical user interface to build complex queries.
+							</p>
+						</li>
+						<li>
+							<h3 class="pull-left margin-bottom-3">Operational Efficiencies</h3>
+							<h5 class="pull-right muted">January 2010 - April 2012</h5>
+							<div class="clearfix"></div>
+							<h5 class="margin-top-0 muted">Nationwide Insurance</h5>
+							<p>
+								An initiative to improve the quote-to-purchase conversion rate by making the web application more 
+								intuitive or more responsive to the end user. Created performance budgets and cost / benefit analysis 
+								using tools such as YSlow, Google Page Speed, JProfiler &amp; HTTP Watch.
+							</p>
+						</li>
+						<li>
+							<h3 class="pull-left margin-bottom-3">Multivariate Plugin Framework</h3>
+							<h5 class="pull-right muted">January 2010 - May 2010</h5>
+							<div class="clearfix"></div>
+							<h5 class="margin-top-0 muted">Nationwide Insurance</h5>
+							<p>
+								In order to facilitate non-biased multivariate testing, we retrofitted an existing application with a 
+								custom-built plugin framework. This project was a small initiative to prove out the concept &amp; ensure 
+								feasibility of such a design. Built using AspectJ. subsequent development efforts using the framework 
+								were able to recognize a 22% increase in the quote-to-bind ratio.
+							</p>
+							<strong class="push-right-20"><i class="fa fa-star"></i> Nominated for the 2011 Nationwide Outstanding IT Contribution Award</strong>
+						</li>
+						<li>
+							<h3 class="pull-left margin-bottom-3">Internet Change Processing</h3>
+							<h5 class="pull-right muted">June 2008 - December 2009</h5>
+							<div class="clearfix"></div>
+							<h5 class="margin-top-0 muted">Nationwide Insurance</h5>
+							<p>
+								A complete re-write of Nationwide's customer-facing insurance policy servicing application written 
+								in Java EE. Used Struts2, Spring, Axis2, IBM MQ, JiBX &amp; deployed to IBM WebSphere v6.1. Acted as a 
+								module lead in charge of several key transactions. Designed & implemented complex technical features 
+								and led a team of 4 developers (onshore and offshore).
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row padding-top-15">
 				<div class="col-md-3">
 					<h1>Education</h1>
 				</div>
@@ -71,16 +153,16 @@
 					<h5 class="margin-top-0 muted">The Ohio State University</h5>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row hidden-print padding-top-15">
 				<div class="col-md-3">
 					<h1>Social</h1>
 				</div>
 				<div class="col-md-9">
-					<div class="col-md-12">
-						<ul class="list-unstyled">
-							<li></li>
-						</ul>
-					</div>
+					<ul class="list-inline padding-top-15">
+						<li><a href="https://www.linkedin.com/profile/view?id=16404698"><div class="social-media linked-in"></div></a></li>
+						<li><a href="http://frankjl.github.io"><div class="social-media github"></div></a></li>
+						<li><a href="http://stackoverflow.com/users/737186/frankjl"><div class="social-media stack-overflow"></div></a></li>
+					</ul>
 				</div>
 			</div>
 			<footer class="footer text-center">

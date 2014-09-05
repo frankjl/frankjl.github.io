@@ -74,8 +74,8 @@ resume.directive('starChart', function() {
 					'width': options.height-2,
 					'xlink:href': 'images/star.svg',
 					'x': -100
-				}).transition().duration(700).attr('x', function() {
-					return computedTextLength + options.textMargin + (options.height-2) * i;
+				}).transition().duration(900).attr('x', function() {
+					return 185 - (options.height-2) * i;
 				})
 			}
 		}
