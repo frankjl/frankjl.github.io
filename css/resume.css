@@ -7,6 +7,7 @@ body {
 	font-family: 'Open Sans';
 	background: rgba(249, 136, 0, 0.65);
 	background-size: 100% 100%;
+	padding: 15px 0px;
 }
 .container {
 	background-color: rgba(255,255,255,0.93);
@@ -21,7 +22,6 @@ h1, h2, h3, h4, h5, h6, p {
 	margin-top: 5px;
 }
 .hero {
-	font-size: 5em;
 	font-weight: 800;
 }
 .padding-top-15 {
@@ -49,48 +49,33 @@ a:hover {
 	text-decoration: none;
 }
 .muted {
-	color: #807B7B;
+	color: #807B7B !important;
 }
 .contact-list {
-	display: block;
+	float: left;
 	clear: both;
 }
-.social-media {
+.contact-list li {
 	display: inline-block;
-	margin-right: 6px;
-	vertical-align: bottom;
+	margin-right: 8px;
 }
-/* li:not(:hover) .social-media {
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	filter: grayscale(100%);	
-} */
-.social-media.linked-in {
-	background: url('../images/linkedin.png');
-	background-repeat: no-repeat;
-	background-size: 32px 32px;
-	width: 32px;
-	height: 32px;
+.footplate {
+	letter-spacing: 2px;
+	text-transform: uppercase;
 }
-.social-media.github {
-	background: url('../images/github.png');
-	background-repeat: no-repeat;
-	background-size: 32px 32px;
-	width: 32px;
-	height: 32px;
+@media all and (min-width: 691px) {
+	.hero {
+		font-size: 5em;
+	}
 }
-.social-media.stack-overflow {
-	background: url('../images/stackoverflow.png');
-	background-repeat: no-repeat;
-	background-size: 32px 32px;
-	width: 33px;
-	height: 32px;
+@media all and (max-width: 737px) {
+	.hero {
+		font-size: 4em;
+	}
 }
-@media screen and (min-width: 895px) {
-	.contact-list {
-		display: inline-block;
-		float: right;
-		clear: none;
+@media all and (max-width:589px) {
+	.hero {
+		font-size: 3em;
 	}
 }
 @media print {
@@ -101,5 +86,12 @@ a:hover {
 	.col-sm-4 {
 		width: 33.33333333% !important;
 		float: left;
+	}
+	body {
+		padding-top: 0;
+		margin: 0px -10px;
+	}
+	.hero {
+		font-size: 5em;
 	}
 }
