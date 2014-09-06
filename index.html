@@ -8,6 +8,7 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.13/angular.min.js"></script>
 		<script src="../js/resume.js"></script>
 		
+		<meta name="viewport" content="width=device-width">
 		<meta charset="UTF-8">
 		<meta name="description" content="Frank J. Lamantia persona resume">
 		<meta name="keywords" content="development java j2ee groovy grails d3 d3.js angular angularJS website awesome full stack engineer">
@@ -38,8 +39,8 @@
 				</div>
 				<div class="col-md-9" ng-controller="ExperienceController">
 					<ul class="list-inline">
-						<li class="col-sm-4 col-xs-6 col-md-4 col-lg-3" style="padding: 3px 3px;" ng-repeat="skill in skills | orderBy:'rating':true">
-							<div star-chart stars="skill.rating" title="skill.title"></div>
+						<li class="col-sm-4 col-xs-6 col-md-4 col-lg-3 padding-3" ng-repeat="skill in skills | orderBy:['-rating','label']">
+							<div star-chart stars="skill.rating" label="skill.title"></div>
 						</li>
 					</ul>
 				</div>

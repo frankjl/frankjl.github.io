@@ -44,7 +44,7 @@ resume.directive('starChart', function() {
 		restrict: 'EA',
 		scope: {
 			stars: '=stars',
-			title: '=title'
+			label: '=label'
 		},
 		link: function($scope, $element, $attrs) {
 			var x = d3.scale.linear().domain([0, 1]).range([0, 100]);
@@ -62,7 +62,7 @@ resume.directive('starChart', function() {
 				'font-weight': '600',
 				'font-size': options.fontSize,
 				'fill': 'black',
-			}).text($scope.title)
+			}).text($scope.label)
 			
 			var computedTextLength = text.node().getComputedTextLength()
 			
