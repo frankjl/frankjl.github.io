@@ -5,14 +5,12 @@ resume.controller('ExperienceController', ['$scope', function($scope) {
        { title: 'D3.js', rating: 4 },
        { title: 'Java EE', rating: 5 },
        { title: 'MySQL', rating: 5 },
-       { title: 'Groovy / Grails', rating: 5 },
-       { title: 'Ruby on Rails', rating: 3 },
-       { title: 'Neo4j', rating: 3 },
-       { title: 'Titan DB', rating: 4 },
-       { title: 'JQuery', rating: 4 },
+       { title: 'Graph Databases', rating: 4 },
        { title: 'CSS', rating: 4 },
        { title: 'Git', rating: 4 },
-       { title: 'IBM WebSphere', rating: 3 },
+       { title: 'Leadership', rating: 5 },
+	   { title: 'Mentoring', rating: 4 },
+	   { title: 'Problem Solving', rating: 5 },
     ]
 }])
 resume.directive('arcChart', function() {

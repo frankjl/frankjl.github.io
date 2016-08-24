@@ -1,33 +1,51 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,800);
-html {
-	background: url('../images/bg-8-full.jpg') no-repeat;
-	background-size: 100% 100%;
-}
+@import url(https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css);
+
 body {
 	font-family: 'Open Sans';
-	background: rgba(249, 136, 0, 0.65);
-	background-size: 100% 100%;
+	background: #e8e8e8;
+}
+#top {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 300px;
+	background-color: #00c0f9;
+	z-index: -1;
 }
 .container {
-	background-color: rgba(255,255,255,0.93);
+	z-index: 999;
+}
+.card + .card {
+	margin-top: 12px;
+}
+.card {
+	padding: 20px;
+	border-radius: 0px;
+	clear: both;
+}
+.card > * {
+	margin-top: 0px;
 }
 strong {
 	font-weight: 600;
 }
-h1 {
+.super-strong {
 	font-weight: 800;
 }
 h1, h2, h3, h4, h5, h6, p {
 	margin-top: 5px;
 }
-.hero {
+.hero, .sub-hero {
 	font-weight: 800;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
 }
 .no-padding {
 	padding: 0px;
 }
 .padding-3 {
-	padding: 3px;	
+	padding: 3px;
 }
 .padding-top-12 {
 	padding-top: 12px;
@@ -45,17 +63,30 @@ ul.projects li {
 	margin-bottom: 3px;
 }
 .margin-top-0 {
-	margin-top: 0;	
+	margin-top: 0;
 }
 .company-logo {
 	margin-top: -2px;
 }
 a {
 	color: black;
-	text-decoration: dotted;
+	text-decoration: none;
 }
 a:hover {
 	text-decoration: none;
+}
+#print_button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: #EF5350;
+	text-transform: none;
+}
+#print_button:hover, #print_button:focus {
+	color: white;
+}
+header ul.list-inline li {
+    padding: 0px 8px;
 }
 .muted {
 	color: #807B7B !important;
@@ -68,8 +99,19 @@ a:hover {
 	letter-spacing: 2px;
 	text-transform: uppercase;
 }
-.fa-linkedin {
-	margin-top: -2px;
+.btn-floating i.fa {
+	font-size: 18px;
+	padding-left: 2px;
+}
+ul.content-list li {
+	padding: 20px 10px;
+	clear: both;
+}
+ul.content-list li:not(:last-child) {
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+ul.content-list li:last-child {
+	padding-bottom: 0px;
 }
 @media all and (max-width: 500px) {
 	ul.list-inline li.col-xs-6 {
@@ -86,12 +128,12 @@ a:hover {
 }
 @media all and (max-width: 737px) {
 	.hero {
-		font-size: 4em;
+		font-size: 2em;
 	}
 }
 @media all and (max-width:589px) {
 	.hero {
-		font-size: 3em;
+		font-size: 1.5em;
 	}
 }
 @media print {
@@ -108,10 +150,21 @@ a:hover {
 		margin: 0px -10px;
 	}
 	.hero {
-		font-size: 5em;
+		font-size: 4.6em;
 	}
 	.company-logo {
 		display: none;
 		visibility: hidden;
+	}
+	.card {
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding: 15px 20px;
+	}
+	.card + .card {
+		margin-top: 0px;
+	}
+	ul.content-list li {
+		padding: 10px 10px;
 	}
 }
