@@ -28,6 +28,9 @@ body {
 .card > * {
 	margin-top: 0px;
 }
+.card > p {
+	margin-left: 10px;
+}
 strong {
 	font-weight: 600;
 }
@@ -85,6 +88,9 @@ a:hover {
 #print_button:hover, #print_button:focus {
 	color: white;
 }
+header ul.list-inline {
+	margin-left: -2px;
+}
 header ul.list-inline li {
     padding: 0px 8px;
 }
@@ -106,12 +112,17 @@ header ul.list-inline li {
 ul.content-list li {
 	padding: 20px 10px;
 	clear: both;
+	page-break-inside: avoid;
 }
 ul.content-list li:not(:last-child) {
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 ul.content-list li:last-child {
 	padding-bottom: 0px;
+}
+ul.skill-list li {
+	min-height: 40px;
+	padding: 10px;
 }
 @media all and (max-width: 500px) {
 	ul.list-inline li.col-xs-6 {
@@ -125,10 +136,19 @@ ul.content-list li:last-child {
 	body {
 		padding: 15px 0px;
 	}
+	.container {
+		width: 100%;
+	}
 }
 @media all and (max-width: 737px) {
 	.hero {
 		font-size: 2em;
+	}
+	.container {
+		width: 100%;
+	}
+	#print_button {
+		display: none;
 	}
 }
 @media all and (max-width:589px) {
@@ -162,9 +182,24 @@ ul.content-list li:last-child {
 		padding: 15px 20px;
 	}
 	.card + .card {
-		margin-top: 0px;
+		margin-top: 5px;
 	}
 	ul.content-list li {
 		padding: 10px 10px;
 	}
+}
+.star-chart .fa:nth-child(1) {
+	color: #90CAF9;
+}
+.star-chart .fa:nth-child(2) {
+	color: #64B5F6;
+}
+.star-chart .fa:nth-child(3) {
+	color: #42A5F5;
+}
+.star-chart .fa:nth-child(4) {
+	color: #2196F3;
+}
+.star-chart .fa:nth-child(5) {
+	color: #1E88E5;
 }
