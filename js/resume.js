@@ -3,16 +3,16 @@ resume.controller('SkillsController', ['$scope', function($scope) {
 	$scope.skills = [
        { title: 'AngularJS', rating: 4 },
        { title: 'D3.js', rating: 4 },
-       { title: 'Java EE', rating: 5 },
+       { title: 'Java', rating: 5 },
        { title: 'Spring Framework', rating: 5 },
-       { title: 'Hibernate', rating: 4 },
-       { title: 'MySQL', rating: 5 },
+       { title: 'Hibernate', rating: 4.5 },
+       { title: 'SQL Databases', rating: 5 },
        { title: 'Graph Databases', rating: 4 },
        { title: 'HTML, CSS, JS', rating: 4 },
        { title: 'Git', rating: 4 },
-	   { title: 'Jenkins', rating: 4 },
-       { title: 'Gradle & Maven', rating: 4 },
-       { title: 'Cloud Architecture', rating: 4 },		
+       { title: 'C.I.', rating: 4 },
+       { title: 'Cloud Architecture', rating: 3 },
+       { title: 'Apache Spark', rating: 3 },
     ]
 }])
 resume.directive('starChart', function() {

@@ -189,17 +189,17 @@ ul.skill-list li {
 	}
 }
 .star-chart .fa:nth-child(1) {
-	color: #90CAF9;
+	color: #1E88E5;
 }
 .star-chart .fa:nth-child(2) {
-	color: #64B5F6;
+	color: #2196F3;
 }
 .star-chart .fa:nth-child(3) {
 	color: #42A5F5;
 }
 .star-chart .fa:nth-child(4) {
-	color: #2196F3;
+	color: #64B5F6;
 }
 .star-chart .fa:nth-child(5) {
-	color: #1E88E5;
+	color: #90CAF9;
 }

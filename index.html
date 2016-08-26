@@ -28,7 +28,7 @@
 					<li>Technical Lead</li>
 					<li>IT Executive</li>
 					<li>Java Guru</li>
-					<li>Java Script Ninja</li>
+					<li>Startup Guy</li>
 				</ul>
 
 				<div class="clearfix"></div>
@@ -186,7 +186,7 @@
 			<div class="col-md-12 card" ng-controller="SkillsController">
 				<h4 class="super-strong">Technical Chops</h4>
 				<ul class="list-inline skill-list clearfix">
-					<li class="col-lg-3 col-sm-4 col-xs-12" ng-repeat="skill in skills | orderBy:skill.title">
+					<li class="col-lg-3 col-sm-4 col-xs-12" ng-repeat="skill in skills | orderBy:'-rating'">
 						<strong>{{ skill.title }}</strong>
 						<span class="pull-right" star-chart stars="skill.rating" label="skill.title"></span>
 					</li>
