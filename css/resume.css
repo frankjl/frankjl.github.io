@@ -69,6 +69,8 @@ ul.projects li {
 	margin-top: 0;
 }
 .company-logo {
+  height: 16px;
+  width: auto;
 	margin-top: -2px;
 }
 a {
