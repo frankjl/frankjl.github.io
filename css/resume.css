@@ -187,13 +187,16 @@ ul.skill-list li {
 		padding: 15px 20px;
 	}
 	.card + .card {
-		margin-top: 5px;
+		margin-top: 0;
 	}
 	ul.content-list li {
 		padding: 10px 10px;
 	}
   header.card {
     margin-top: -20px;
+  }
+  .card:last-of-type {
+     page-break-after: auto;
   }
 }
 .star-chart .fa:nth-child(1) {
