@@ -159,6 +159,9 @@ ul.skill-list li {
 	}
 }
 @media print {
+  .columns {
+    column-count: 2 !important;
+  }
 	a[href]:after {
 		content: none !important;
 	}
@@ -189,6 +192,9 @@ ul.skill-list li {
 	ul.content-list li {
 		padding: 10px 10px;
 	}
+  header.card {
+    margin-top: -20px;
+  }
 }
 .star-chart .fa:nth-child(1) {
 	color: #1E88E5;
@@ -204,4 +210,29 @@ ul.skill-list li {
 }
 .star-chart .fa:nth-child(5) {
 	color: #90CAF9;
+}
+.columns > * {
+  padding: 5px 10px;
+}
+.skill-logo {
+  height: 16px;
+  margin-right: 10px;
+}
+.skill-logo.glyphicon {
+  height: auto;
+}
+@media (min-width: 1024px) {
+  .columns {
+    column-count: 3;
+  }
+}
+@media (min-width: 601px) and (max-width: 1023px) {
+  .columns {
+    column-count: 2;
+  }
+}
+@media (max-width: 600px) {
+  .columns {
+    column-count: 1;
+  }
 }
