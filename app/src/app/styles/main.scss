@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One|Open+Sans');
+@import '_utils.scss';
+
+$fab-button-size: 40px;
+$footer-height: 80px;
+
+md-contact-fab {
+  margin: 0 auto;
+  display: inline-block;
+
+  .md-button.md-fab {
+    height: $fab-button-size;
+    width: $fab-button-size;
+    line-height: $fab-button-size;
+    margin: 4px;
+  }
+}
+md-content {
+  max-width: 1000px;
+  margin: 20px 0px;
+  padding-bottom: $footer-height;
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: $footer-height;
+    padding: 15px;
+    background-color: #2196f3;
+  }
+}
+.hidden {
+  visibility: hidden;
+}
+html, body {
+  background-color: #efefef;
+  font-family: 'Open Sans', sans-serif;
+}
+.fjl-title {
+  font-weight: 800;
+  margin: 0;
+}
+.fjl-subheader {
+  margin-top: -5px;
+  font-weight: 400;
+  font-family: 'Francois One', sans-serif;
+}
