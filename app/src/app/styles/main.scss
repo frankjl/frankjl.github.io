@@ -79,3 +79,6 @@ md-slider[md-discrete] .md-sign:after {
   -webkit-transform: translate3d(0, 0, 0) scale(1);
   transform: translate3d(0, 0, 0) scale(1);
 }
+.show-print {
+  visibility: hidden;
+}
