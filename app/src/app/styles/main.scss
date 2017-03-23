@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Francois+One|Open+Sans');
 @import '_utils.scss';
 @import '_timeline.scss';
+@import '_print.scss';
 
 $fab-button-size: 40px;
 $footer-height: 80px;
@@ -12,10 +13,12 @@ div.md-contact-fab {
     line-height: $fab-button-size;
   }
 }
+md-content.has-footer {
+  padding-bottom: $footer-height;
+}
 md-content {
   max-width: 1200px;
   margin: 20px 0px;
-  padding-bottom: $footer-height;
 
   footer {
     position: absolute;
@@ -42,4 +45,37 @@ html, body {
   margin-top: -5px;
   font-weight: 400;
   font-family: 'Francois One', sans-serif;
+}
+.columns-layout {
+  md-slider-container {
+    width: 50%;
+    display: inline-block;
+    float: left;
+  }
+}
+md-grid-list.skills {
+  md-grid-tile figure {
+    padding: 0 10px;
+  }
+}
+.star-chart .fa:nth-child(1) {
+	color: #1E88E5;
+}
+.star-chart .fa:nth-child(2) {
+	color: #2196F3;
+}
+.star-chart .fa:nth-child(3) {
+	color: #42A5F5;
+}
+.star-chart .fa:nth-child(4) {
+	color: #64B5F6;
+}
+.star-chart .fa:nth-child(5) {
+	color: #90CAF9;
+}
+md-slider[md-discrete] .md-sign,
+md-slider[md-discrete] .md-sign:after {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0) scale(1);
 }

@@ -1,0 +1,49 @@
+@media print {
+  ul.timeline {
+    margin-top: 120px;
+    li.timeline-event {
+      min-height: 240px;
+      margin-top: -100px;
+    }
+  }
+  .fjl-title.md-display-2 {
+    font-size: 40px;
+  }
+  .hidden-print {
+    display: none;
+    visibility: hidden;
+  }
+  div > h1.text-center {
+    text-align: left;
+    font-size: 32px;
+  }
+  * {
+    box-shadow: none !important;
+  }
+  [when-visible].hidden {
+    visibility: visible;
+    display: inherit;
+  }
+  ul.timeline {
+    margin-top: 20px;
+
+    li.timeline-event {
+      margin-top: 0px;
+
+      timeline-badge {
+        display: none;
+      }
+      timeline-panel {
+        border: 0px;
+        width: 100%;
+
+        .timeline-heading h4 {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  md-content {
+    padding-bottom: 0 !important;
+  }
+}
