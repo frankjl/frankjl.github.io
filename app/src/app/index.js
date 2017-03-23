@@ -9,8 +9,8 @@ require('./styles');
 
 angular.module('resume', [ngMaterial, uiRouter, 'angular-timeline', 'angular-scroll-animate'])
 .config(($mdThemingProvider) => {
-  $mdThemingProvider.theme('default')
-    .primaryPalette('blue');
+  'ngInject';
+  $mdThemingProvider.theme('default').primaryPalette('blue');
 })
 .config(($stateProvider, $urlRouterProvider) => {
   'ngInject';
@@ -19,6 +19,7 @@ angular.module('resume', [ngMaterial, uiRouter, 'angular-timeline', 'angular-scr
     url: '/',
     template: resumeTemplate,
     controller($sce, $window) {
+      'ngInject';
       this.animateIn = ($el) => {
         $el.removeClass('hidden');
         $el.addClass('animated zoomIn');
@@ -37,13 +38,14 @@ angular.module('resume', [ngMaterial, uiRouter, 'angular-timeline', 'angular-scr
           subheader: 'July 2016 - current',
           items: [
             'Research & adopt new technologies to scale the business; prototyping when appropriate.',
-            'External face of the company regarding science and technology.',
+            'External face of the company regarding science and technology.  Promote a technology friendly culture.',
             'Lead technology and architecture discussions, interface with product to ensure alignment.',
             'Technical advisor to the CEO.',
           ],
         },
         {
           title: 'Scaling Engineering Teams',
+          class: 'hidden-print',
           badgeClass: 'youtube',
           subheader: 'Lessons learned in scaling CrossChx\' Engineering team.  ScaleTech, November 2016',
           video: {
@@ -52,6 +54,7 @@ angular.module('resume', [ngMaterial, uiRouter, 'angular-timeline', 'angular-scr
         },
         {
           title: 'CrossChx Connect',
+          class: 'hidden-print',
           badgeClass: 'cx-blue',
           subheader: 'Product design, architecture & implementation',
           video: {
@@ -80,6 +83,7 @@ angular.module('resume', [ngMaterial, uiRouter, 'angular-timeline', 'angular-scr
         {
           title: 'CrossChx Biometrics',
           badgeClass: 'cx-blue',
+          class: 'hidden-print',
           subheader: 'Product architecture, development and implementation',
           video: {
             url: $sce.trustAsResourceUrl('https://www.youtube.com/embed/LAPKMC8B9a0')
@@ -97,6 +101,7 @@ angular.module('resume', [ngMaterial, uiRouter, 'angular-timeline', 'angular-scr
           title: 'Abstract: Transforming Research Program Management',
           subheader: 'From a Ticketing System to a Computerized Research Record (CoRR)',
           badgeClass: 'whitepaper fa fa-file-pdf-o fa-2x',
+          class: 'hidden-print',
           description: [
             'An abstract that I co-authored about a software project that we delivered ',
             'to the Center for Clinical & Translation Science at the Ohio State University.'
@@ -107,6 +112,7 @@ angular.module('resume', [ngMaterial, uiRouter, 'angular-timeline', 'angular-scr
           title: 'Abstract: A Scalable Approach to Dynamically Populating REDCap',
           subheader: 'Enabling Research Registries from an Enterprise Data Warehouse',
           badgeClass: 'whitepaper fa fa-file-pdf-o fa-2x',
+          class: 'hidden-print',
           description: [
             'An abstract that I authored about our attempts to use an existing research',
             'data collection tool (REDCap) with a custom ETL pipeline to enable research ',
@@ -173,26 +179,4 @@ angular.module('resume', [ngMaterial, uiRouter, 'angular-timeline', 'angular-scr
     bindToController: true,
   });
   $urlRouterProvider.otherwise('/');
-}).directive('starChart', function() {
-	return {
-		restrict: 'EA',
-		scope: {
-			stars: '=stars',
-		},
-		link: function($scope, $element, $attrs) {
-
-			var starChart = angular.element('<div class="star-chart" style="min-width: 66px;"></div>');
-
-			$element.append(starChart);
-
-			$scope.$watch('stars', function() {
-				for (var i = 0; i < Math.floor($scope.stars); i++) {
-					starChart.append('<i class="fa fa-star" aria-hidden="true"></i>');
-				}
-				if (Math.ceil($scope.stars) > $scope.stars) {
-					starChart.append('<i class="fa fa-star-half" aria-hidden="true"></i>');
-				}
-			})
-		}
-	}
 });

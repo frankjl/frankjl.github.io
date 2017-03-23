@@ -1,9 +1,22 @@
 @media print {
   ul.timeline {
-    margin-top: 120px;
+    margin-top: 20px;
     li.timeline-event {
-      min-height: 240px;
-      margin-top: -100px;
+      min-height: inherit;
+      margin-top: 0px;
+      timeline-badge {
+        display: none;
+      }
+      timeline-panel {
+        border: 0px;
+        width: 100%;
+        p {
+          max-width: 900px;
+        }
+        .timeline-heading h4 {
+          font-size: 18px;
+        }
+      }
     }
   }
   .fjl-title.md-display-2 {
@@ -16,6 +29,7 @@
   div > h1.text-center {
     text-align: left;
     font-size: 32px;
+    margin: 0;
   }
   * {
     box-shadow: none !important;
@@ -24,26 +38,23 @@
     visibility: visible;
     display: inherit;
   }
-  ul.timeline {
-    margin-top: 20px;
 
-    li.timeline-event {
-      margin-top: 0px;
-
-      timeline-badge {
-        display: none;
-      }
-      timeline-panel {
-        border: 0px;
-        width: 100%;
-
-        .timeline-heading h4 {
-          font-size: 18px;
-        }
-      }
-    }
-  }
   md-content {
     padding-bottom: 0 !important;
+  }
+  .show-print {
+    visibility: visible;
+  }
+  md-grid-tile {
+    left: auto !important;
+    right: auto !important;
+    position: relative !important;
+    float: left !important;
+    width: 50% !important;
+    display: inline-block !important;
+    margin-top: 0px !important;
+  }
+  .fa.fa-star {
+    color: black !important;
   }
 }

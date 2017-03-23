@@ -9,7 +9,7 @@
     <md-list>
       <md-list-item>Extensive experience in research &amp; development.  Track record of building highly-available, mission-critical applications.</md-list-item>
       <md-list-item>Technical executive, leader and full stack engineer.</md-list-item>
-      <md-list-item>Brought to you from Dublin, OH</md-list-item>
+      <md-list-item>Dublin, OH</md-list-item>
     </md-list>
   </section>
   <footer layout="row" layout-align="center center" class="hidden-print">
@@ -25,7 +25,7 @@
 
 <h1 class="text-center">Timeline</h1>
 <timeline>
-  <timeline-event side="alternate" ng-repeat="position in vm.positions">
+  <timeline-event side="alternate" ng-repeat="position in vm.positions" ng-class="position.class">
     <timeline-badge class="{{position.badgeClass}}"></timeline-badge>
     <timeline-panel ng-click="vm.handle(position)" class="md-padding z-depth-4 hidden" when-visible="vm.animateIn" when-not-visible="vm.animateOut">
       <timeline-heading>
@@ -45,7 +45,7 @@
 <h1 class="text-center">Technical Skills</h1>
 <md-content class="z-depth-5 md-padding hidden" when-visible="vm.animateIn" when-not-visible="vm.animateOut">
   <md-grid-list
-    md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="4"
+    md-cols-xs="1" md-cols-sm="2" md-cols-md="2" md-cols-gt-md="4"
     md-row-height="5:1" class="skills">
     <md-grid-tile md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" ng-repeat="skill in vm.skills | orderBy:'-rating'">
       <h6>{{ skill.title }}</h6>
