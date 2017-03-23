@@ -12,35 +12,32 @@
       <md-list-item>Brought to you from Dublin, OH</md-list-item>
     </md-list>
   </section>
-  <footer>
-    <md-contact-fab layout-align="end">
+  <footer layout="row" layout-align="center center">
+    <div class="md-contact-fab">
       <md-button class="md-fab md-raised blue darken-3 btn-floating" aria-label="LinkedIn" href="https://www.linkedin.com/in/frank-lamantia-5625b15" target="_blank"><i class="fa fa-linkedin"></i></md-button>
       <md-button class="md-fab black darken-3 btn-floating" aria-label="GitHub" href="http://frankjl.github.io" target="_blank"><i class="fa fa-github"></i></md-button>
       <md-button class="md-fab orange btn-floating" aria-label="Stack Overflow" href="http://stackoverflow.com/users/737186/frankjl" target="_blank"><i class="fa fa-stack-overflow"></i></md-button>
       <md-button class="md-fab blue btn-floating" aria-label="Twitter" href="https://twitter.com/frankjlamantia" target="_blank"><i class="fa fa-twitter"></i></md-button>
       <md-button class="md-fab yellow darken-1 btn-floating" aria-label="Email" href="mailto:frankjlamantia+github@gmail.com" target="_blank"><i class="fa fa-envelope"></i></md-button>
-    </md-contact-fab>
+    </div>
   </footer>
 </md-content>
 
-<div layout="column" class="z-depth-5">
-  <md-toolbar class="md-primary">
-    <div class="md-toolbar-tools">
-      <h2 class="md-flex">Experience</h2>
-    </div>
-  </md-toolbar>
-  <md-content class="md-padding">
-    here
-  </md-content>
-</div>
-
-
-<md-content ng-repeat="i in [1,2,3,4,5,6,7,8,9,10]" layout="row" class="hidden z-depth-4" when-visible="vm.animateIn" when-not-visible="vm.animateOut">
-  <section class="md-padding">
-    asdfasfds
-  </section>
-  <section class="md-padding">
-    <h1 class="md-title">Frank J. Lamantia</h1>
-    <h4 class="md-subhead">Tech Executive &amp; Startup Enthusiast</h4>
-  </section>
-</md-content>
+<h1 class="text-center">Timeline</h1>
+<timeline>
+  <timeline-event side="alternate" ng-repeat="position in vm.positions">
+    <timeline-badge class="{{position.badgeClass}}"></timeline-badge>
+    <timeline-panel ng-click="vm.handle(position)" class="md-padding z-depth-4 hidden"  when-visible="vm.animateIn" when-not-visible="vm.animateOut">
+      <timeline-heading>
+        <h4>{{ position.title }}</h4>
+        <h4 class="md-subhead fjl-subheader text-muted"><i ng-class="position.icon" ng-if="position.icon"></i> {{ position.subheader }}</h4>
+      </timeline-heading>
+      <h4 class="md-subhead" ng-if="position.items">Responsibilities</h4>
+      <md-list-items ng-if="position.items">
+        <md-list-item ng-repeat="item in position.items">{{ item }}</md-list-item>
+      </md-list-items>
+      <iframe ng-if="position.video" ng-src="{{ position.video.url }}" frameborder="0" allowfullscreen></iframe>
+      <p ng-if="position.description">{{ position.description }}</p>
+    </timeline-panel>
+  </timeline-event>
+</timeline>
