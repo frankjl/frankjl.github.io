@@ -19,6 +19,7 @@ export default ['$window', '$sce', function ResumeController($window, $sce) {
         'Research & adopt new technologies to scale the business; prototyping when appropriate.',
         'External face of the company regarding science and technology.  Promote a technology friendly culture.',
         'Lead technology and architecture discussions, interface with product to ensure alignment.',
+        'Oversee 35 technical staff, including engineering, devops, analytics & quality assurance.',
         'Technical advisor to the CEO.',
       ],
     },
@@ -138,7 +139,6 @@ export default ['$window', '$sce', function ResumeController($window, $sce) {
      { title: 'Spring Framework', rating: 5, domain: 'spring.io' },
      { title: 'Hibernate', rating: 5, domain: 'hibernate.org' },
      { title: 'Relational Databases', rating: 5, domain: 'mysql.com' },
-     { title: 'Gradle', rating: 4, domain: 'gradle.org' },
      { title: 'Neo4j & TitanDB', rating: 4, domain: 'neo4j.com' },
      { title: 'ElasticSearch', rating: 4, domain: 'elasticsearch.co' },
      { title: 'HTML, CSS, JS', rating: 4, domain: 'mozilla.org' },
@@ -152,6 +152,7 @@ export default ['$window', '$sce', function ResumeController($window, $sce) {
      { title: 'Docker', rating: 4, domain: 'docker.com' },
      { title: 'Amazon Web Services', rating: 4, domain: 'aws.amazon.com' },
      { title: 'Linux', rating: 5, domain: 'centos.org' },
+     { title: 'DevOps', rating: 5, domain: 'devops.com' },
   ];
 
   return this;
